@@ -33,17 +33,28 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
     <script>
+      // var slider = new KeenSlider("#my-keen-slider", {
+      //   loop: true,
+      //   origin: auto,
+      //   breakpoints: {
+      //     "(max-width: 600px)": {
+      //       slides: { perView: 4 },
+      //     },
+          
+      //   },
+      //   slides: { perView: 1 },
+      // });
       var slider = new KeenSlider("#my-keen-slider", {
-        loop: true,
-        origin: auto,
         breakpoints: {
           "(min-width: 400px)": {
-            slides: { perView: 4 },
+            slides: { perView: 2, spacing: 5 },
           },
-          
+          "(min-width: 1000px)": {
+            slides: { perView: 3, spacing: 10 },
+          },
         },
         slides: { perView: 1 },
-      });
+      })
     </script>
     <script type="module" src="./assets/js/script.js"></script>
 </body>

@@ -12,7 +12,7 @@
     --text-primary: #0a0a0a;
 }
 .container{
-    background: linear-gradient(180deg, #FFF 0%, #A79E9E 100%);
+    background-color: #D3D3D3;
     width: 100vw;
     height: 100vh;
 }
@@ -42,12 +42,17 @@
 .container .header .header-teams .team{
     margin: 10px;
 }
+.keen-slider__slide{
+    min-width: 60px !important;
+    margin: 60px !important;
+    margin: 10px !important;
+}
 /* .container .header .header-teams .team:hover{
    scale: 1.1;
    cursor: pointer;
 } */
 .container .header .header-teams .team img{
-    height: 50px;
+    width: 50px;
 }
 .container .header .header-title{
     height:30px;

@@ -4,7 +4,7 @@ const data = await res.json();
 data.forEach(team => {
     headerTeams.innerHTML += `
         <div class="team keen-slider__slide">
-                    <img src="./assets/img/${team.url}" alt="">
+            <img src="./assets/img/${team.url}" alt="">
         </div>
     `
 });
