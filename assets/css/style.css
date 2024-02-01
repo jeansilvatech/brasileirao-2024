@@ -39,14 +39,14 @@
     align-items: center;
 
 }
-.container .header .header-teams .team{
+/* .container .header .header-teams .team{
     margin: 10px;
-}
-.keen-slider__slide{
+} */
+/* .keen-slider__slide{
     min-width: 60px !important;
-    margin: 60px !important;
+    max-width: 60px !important;
     margin: 10px !important;
-}
+} */
 /* .container .header .header-teams .team:hover{
    scale: 1.1;
    cursor: pointer;
