@@ -3,8 +3,8 @@ const res = await fetch("../data/teams.json")
 const data = await res.json();
 data.forEach(team => {
     headerTeams.innerHTML += `
-        <div class="keen-slider__slide team">
-            <img src="./assets/img/${team.url}" alt="escudo do ${team.name}">
+        <div class="keen-slider__slide team ${team.url}">
+            <img src="./assets/img/${team.url}.svg" alt="escudo do ${team.name}">
         </div>
     `
 });
@@ -33,4 +33,23 @@ var slider = new KeenSlider("#my-keen-slider", {
         perView: 1
     },
   })
+  const team = document.querySelectorAll('.team')
 
+  team.forEach(equip =>{
+    console.log(equip.before)
+   
+    if(localStorage.fav == equip.classList[2]){
+      equip.style.backgroundColor = "#ffffff"
+    }
+    equip.addEventListener('click', ()=>{
+      equip.style.backgroundColor = "#ffffff"
+      localStorage.fav = equip.classList[2]
+      
+    }
+    
+    )
+    
+  })
+// const beforeCard = document.styleSheets[1].cssRules[7]
+// beforeCard.style.backgroundColor = "#000"
+// console.log(document.styleSheets[1].cssRules[7])

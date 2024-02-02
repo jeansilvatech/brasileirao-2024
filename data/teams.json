@@ -2,101 +2,101 @@
     {
         "id": 1,
         "name":"athletico-pr",
-        "url":"athletico-pr.svg"
+        "url":"athletico-pr"
     },
     {
         "id":2,
         "name":"atlético-go",
-        "url":"atletico-go.svg"
+        "url":"atletico-go"
     },
     {
         "id":3,
         "name":"atlético",
-        "url":"atletico.svg"
+        "url":"atletico"
     },
     {
         "id":4,
         "name":"bahia",
-        "url":"bahia.svg"
+        "url":"bahia"
     },
     {
         "id":5,
         "name":"botafogo",
-        "url":"botafogo.svg"
+        "url":"botafogo"
     },
     {
         "id":6,
         "name":"rb bragantino",
-        "url":"rb-bragantino.svg"
+        "url":"rb-bragantino"
     },
     {
         "id":7,
         "name":"corinthians",
-        "url":"corinthians.svg"
+        "url":"corinthians"
     },
     {
         "id":8,
         "name":"cruzeiro",
-        "url":"cruzeiro.svg"
+        "url":"cruzeiro"
     },
     {
         "id":9,
         "name":"criciúma",
-        "url":"criciuma.svg"
+        "url":"criciuma"
     },
     {
         "id":10,
         "name":"cuiabá",
-        "url":"cuiaba.svg"
+        "url":"cuiaba"
     },
     {
         "id":11,
         "name":"flamengo",
-        "url":"flamengo.svg"
+        "url":"flamengo"
     },
     {
         "id":12,
         "name":"fluminense",
-        "url":"fluminense.svg"
+        "url":"fluminense"
     },
     {
         "id":13,
         "name":"fortaleza",
-        "url":"fortaleza.svg"
+        "url":"fortaleza"
     },
     {
         "id":14,
         "name":"grêmio",
-        "url":"gremio.svg"
+        "url":"gremio"
     },
     {
         "id":15,
         "name":"internacional",
-        "url":"internacional.svg"
+        "url":"internacional"
     },
     {
         "id":16,
         "name":"juventude",
-        "url":"juventude.svg"
+        "url":"juventude"
     },
     {
         "id":17,
         "name":"palmeiras",
-        "url":"palmeiras.svg"
+        "url":"palmeiras"
     },
     {
         "id":18,
         "name":"são paulo",
-        "url":"sao-paulo.svg"
+        "url":"sao-paulo"
     },
     {
         "id":19,
         "name":"vasco da gama",
-        "url":"vasco.svg"
+        "url":"vasco"
     },
     {
         "id":20,
         "name":"vitória",
-        "url":"vitoria.svg"
+        "url":"vitoria"
     }
 ]
