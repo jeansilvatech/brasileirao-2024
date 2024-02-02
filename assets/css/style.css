@@ -1,100 +1,96 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
-    transition: .5s;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  transition: 0.5s;
 }
-:root{
-    --default: #ffffff;
-    --primary:#191970;
-    --secondary: #006400;
-    --tertiary: #FFD700;
-    --text-primary: #0a0a0a;
-}
-.container{
-    background-color: #D3D3D3;
-    width: 100vw;
-    height: 100vh;
-}
-.container .header .header-logo{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    inset: 0;
-    background-color: var(--secondary);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    z-index: 2;
-}
-.container .header .header-logo img{
-    width: 95px;
-}
-.container .header .header-teams{
-    background-color: var(--tertiary);
-    width: 100vw;
-    position: relative;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+.container {
+  background-color: #D3D3D3;
+  width: 100vw;
+  height: 100vh;
 }
-.container .header .header-teams .team{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    padding: 5px;
-    margin: 10px 0 10px 0;
-    max-width: 60px !important;
-    cursor: pointer;
+
+.container .header .header-logo {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  inset: 0;
+  background-color: #006400;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 2;
 }
-.container .header .header-teams .team:hover{
-    scale: 1.03;
-    background-color: var(--default);
-    border-radius: 10px;
+.container .header .header-logo img {
+  width: 95px;
 }
-.container .header .header-teams .team::before{
-    content: "";
-    background-color: var(--default);
-    background-image: url("../img/fav.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    right: 10px;
-    transition: .5s;
+
+.container .header .header-teams {
+  background-color: #FFD700;
+  width: 100vw;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.container .header .header-teams .team:hover:before{
-    font-size: 10px;
-    background-color: #191970;
-    width: 25px;
-    height: 25px;
-    transform: translateX(-20px);
+.container .header .header-teams .team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  margin: 10px 0 10px 0;
+  max-width: 60px !important;
+  cursor: pointer;
 }
-.container .header .header-teams .team img{
-    height: 50px;
+.container .header .header-teams .team:hover {
+  scale: 1.03;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
-.container .header .header-title{
-    height:30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary);
-    color: var(--default);
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+.container .header .header-teams .team::before {
+  content: "";
+  background-color: #ffffff;
+  background-image: url("../img/fav.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  transition: 0.5s;
 }
-.container .header .header-title h1{
-    font-size: 17px;
-    font-weight: 300;
-    text-transform: uppercase;
+.container .header .header-teams .team:hover:before {
+  font-size: 10px;
+  background-color: #191970;
+  width: 25px;
+  height: 25px;
+  transform: translateX(-20px);
 }
+.container .header .header-teams .team img {
+  height: 50px;
+}
+
+.container .header .header-title {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191970;
+  color: #ffffff;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.container .header .header-title h1 {
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: uppercase;
+}/*# sourceMappingURL=style.css.map */

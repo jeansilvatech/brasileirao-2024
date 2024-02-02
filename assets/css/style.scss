@@ -1,0 +1,99 @@
+$default: #ffffff;
+$primary:#191970;
+$secondary: #006400;
+$tertiary: #FFD700;
+$text-primary: #0a0a0a;
+$bgcolor: #D3D3D3;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: .5s;
+}
+.container{
+    background-color: $bgcolor;
+    width: 100vw;
+    height: 100vh;
+}
+.container .header .header-logo{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    inset: 0;
+    background-color: $secondary;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    img{
+        width: 95px;
+    }
+}
+.container .header .header-teams{
+    background-color: $tertiary;
+    width: 100vw;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .team{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+        margin: 10px 0 10px 0;
+        max-width: 60px !important;
+        cursor: pointer;
+    }
+    .team:hover{
+        scale: 1.03;
+        background-color: $default;
+        border-radius: 10px;
+    }
+    .team::before{
+        content: "";
+        background-color: $default;
+        background-image: url("../img/fav.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        transition: .5s;
+    }
+    .team:hover:before{
+        font-size: 10px;
+        background-color:$primary;
+        width: 25px;
+        height: 25px;
+        transform: translateX(-20px);
+    }
+    .team img{
+        height: 50px;
+    }
+}
+.container .header .header-title{
+    height:30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    color: $default;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    h1{
+        font-size: 17px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}
