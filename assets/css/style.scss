@@ -49,36 +49,36 @@ $bgcolor: #D3D3D3;
         margin: 10px 0 10px 0;
         max-width: 60px !important;
         cursor: pointer;
-    }
-    .team:hover{
-        scale: 1.03;
-        background-color: $default;
-        border-radius: 10px;
-    }
-    .team::before{
-        content: "";
-        background-color: $default;
-        background-image: url("../img/fav.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        position: absolute;
-        bottom: 0;
-        right: 10px;
-        transition: .5s;
-    }
-    .team:hover:before{
-        font-size: 10px;
-        background-color:$primary;
-        width: 25px;
-        height: 25px;
-        transform: translateX(-20px);
-    }
-    .team img{
-        height: 50px;
+        &:hover{
+            scale: 1.03;
+            background-color: $default;
+            border-radius: 10px;
+        }
+        &::before{
+            content: "";
+            background-color: $default;
+            background-image: url("../img/fav.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            transition: .5s;
+        }
+        &:hover:before{
+            font-size: 10px;
+            background-color:$primary;
+            width: 25px;
+            height: 25px;
+            transform: translateX(-20px);
+        }
+        img{
+            height: 50px;
+        }
     }
 }
 .container .header .header-title{
