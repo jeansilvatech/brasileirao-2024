@@ -23,6 +23,19 @@ $bgcolor: #D3D3D3;
     width: 100vw;
     height: 100vh;
 }
+.header{
+    .icon-drag{
+        @include flexCenter(row);
+        transform: translateY(-30px);
+        display: none;
+        @media (max-width:768px){
+            display: flex;
+        }
+        img{
+            width: 100px;
+        }
+    }
+}
 .container .header .header-logo{
     height: 100px;
     @include flexCenter(row);
@@ -41,6 +54,21 @@ $bgcolor: #D3D3D3;
     position: relative;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     @include flexCenter(row);
+    @media screen {
+        @media (max-width:600px) {
+            &::before{
+                content: "";
+                width: 50px;
+                height: 80px;
+                background-color: #0a0a0a;
+                position: absolute;
+                right: 0;
+                z-index: 2;
+                pointer-events: none;
+                background: linear-gradient(to right, rgba(25, 25, 112, 0), rgba(25, 25, 112,1));
+            }
+        }
+      }
     .team{
         @include flexCenter(column);
         width: 60px;
