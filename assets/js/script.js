@@ -9,23 +9,29 @@ data.forEach(team => {
     `
 });
 var slider = new KeenSlider("#my-keen-slider", {
+    initial:1,
     breakpoints: {
       "(min-width: 320px)": {
         slides: { 
-            perView: 3,
+            perView: 4,
             spacing:1,
-            origin:3},
+            origin:2
+          },
       },
       "(min-width: 600px)": {
-        slides: { perView: 5},
+        slides: { perView: 5
+        },
       },
       "(min-width: 768px)": {
-        slides: { perView: 10,
-            spacing:1,
-            origin:1},
+        slides: { 
+          perView: 8,
+          spacing:1,
+          origin:1
+          },
       },
       "(min-width: 1100px)": {
-        slides: { perView: 20
+        slides: { 
+          perView: 20
         },
       },
     },
