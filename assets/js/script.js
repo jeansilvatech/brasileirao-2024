@@ -18,10 +18,6 @@ var slider = new KeenSlider("#my-keen-slider", {
             origin:2
           },
       },
-      "(min-width: 600px)": {
-        slides: { perView: 5
-        },
-      },
       "(min-width: 768px)": {
         slides: { 
           perView: 8,
