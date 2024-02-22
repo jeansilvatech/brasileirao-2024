@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
   transition: 0.7s;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -205,6 +205,11 @@ body {
   z-index: 11;
   animation: loader-logo 5s linear infinite;
 }
+@media (max-width: 768px) {
+  .loader-screen img {
+    width: 100px;
+  }
+}
 
 .matches {
   width: 100%;
@@ -223,7 +228,6 @@ body {
 }
 .matches .round {
   width: 100%;
-  margin-left: 50px;
   text-align: center;
 }
 .matches .round h2 {
@@ -251,8 +255,7 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .matches .card-match:hover {
-  background-color: #006400;
-  scale: 1.05;
+  scale: 1.03;
 }
 @media (max-width: 600px) {
   .matches .card-match {
@@ -305,6 +308,10 @@ body {
   border-radius: 0 0 20px 20px;
   pointer-events: none;
   transform: translateY(40px);
+}
+.matches .card-match .gradient-card:hover {
+  width: 250px;
+  height: 160px;
 }
 @media (max-width: 600px) {
   .matches .card-match .gradient-card {

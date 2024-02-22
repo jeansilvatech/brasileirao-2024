@@ -4,6 +4,13 @@ const data = await res.json();
 const loaderScreen = document.querySelector('.loader-screen')
 const page = document.querySelector('.container')
 const logo = document.querySelector('.header-logo img')
+let dataMatches = [];
+async function api(){
+  const res = await fetch("../data/matches.json")
+  dataMatches = await res.json();
+  return console.log(dataMatches)
+}
+api()
 function loader(){
   setTimeout(()=>{
     loaderScreen.style.display = 'none'
@@ -49,8 +56,7 @@ var slider = new KeenSlider("#my-keen-slider", {
   const team = document.querySelectorAll('.team')
 
   team.forEach(equip =>{
-    console.log(equip.before)
-   
+  
     if(localStorage.fav == equip.classList[2]){
       equip.style.backgroundColor = "#ffffff"
     }
