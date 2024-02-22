@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
-  transition: 0.5s;
+  transition: 0.7s;
+}
+
+body {
+  background-color: #191970;
 }
 
 .container {
@@ -45,6 +49,10 @@
   width: 95px;
 }
 
+.enter-logo {
+  animation: enter-logo 3s ease-in-out;
+}
+
 .container .header .header-teams {
   background-color: #FFD700;
   width: 100vw;
@@ -73,9 +81,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 60px;
-  height: 60px;
-  padding: 5px;
+  padding: 5px 10px 5px 10px;
   margin: 10px 0 10px 0;
   max-width: 60px !important;
   border-radius: 10px;
@@ -83,6 +89,7 @@
 }
 .container .header .header-teams .team:hover {
   scale: 1.03;
+  background-color: #191970;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .container .header .header-teams .team::before {
@@ -142,9 +149,57 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-  .keen-slider__slide {
-    max-width: 100px !important;
-    min-width: 100px !important;
+.enter-page {
+  animation: enter-page 3s linear;
+}
+
+@keyframes enter-logo {
+  0% {
+    transform: translateY(-100px);
   }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes enter-page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loader-logo {
+  0%, 100% {
+    scale: 1.2;
+  }
+  50% {
+    scale: 1;
+  }
+}
+.loader-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #191970;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.loader-screen::after {
+  content: "";
+  width: 100vw;
+  height: 50vh;
+  background-color: #006400;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.loader-screen img {
+  width: 200px;
+  z-index: 11;
+  animation: loader-logo 5s linear infinite;
 }/*# sourceMappingURL=style.css.map */

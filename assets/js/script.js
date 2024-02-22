@@ -1,6 +1,17 @@
 const headerTeams = document.querySelector('.header-teams')
 const res = await fetch("../data/teams.json")
 const data = await res.json();
+const loaderScreen = document.querySelector('.loader-screen')
+const page = document.querySelector('.container')
+const logo = document.querySelector('.header-logo img')
+function loader(){
+  setTimeout(()=>{
+    loaderScreen.style.display = 'none'
+    logo.classList.add('enter-logo')
+    page.classList.add('enter-page')
+  },5000)
+}
+loader()
 data.forEach(team => {
     headerTeams.innerHTML += `
         <div class="keen-slider__slide team ${team.url}">
@@ -9,7 +20,6 @@ data.forEach(team => {
     `
 });
 var slider = new KeenSlider("#my-keen-slider", {
-    initial:1,
     breakpoints: {
       "(min-width: 320px)": {
         slides: { 
@@ -26,8 +36,9 @@ var slider = new KeenSlider("#my-keen-slider", {
           },
       },
       "(min-width: 1100px)": {
+        disabled: true,
         slides: { 
-          perView: 20
+          perView:20
         },
       },
     },
