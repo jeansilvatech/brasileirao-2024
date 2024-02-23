@@ -148,6 +148,10 @@ body {
     img {
       width: 50px;
       height: 50px;
+      @media (max-width:600px){
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }
@@ -256,8 +260,8 @@ body {
         width: 70px;
         height: 70px;
         @media (max-width:600px){
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
         }
       }
       span {
@@ -291,7 +295,7 @@ body {
       @media (max-width:600px){
         width: 150px;
         height: 55px;
-        transform: translateY(0px);
+        transform: translateY(5px);
         border-radius: 0 0 5px 5px;
     }
     }
