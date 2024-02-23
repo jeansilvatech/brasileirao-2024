@@ -245,8 +245,9 @@ body {
      }
     @media (max-width:600px){
         width: 150px;
-        height: 55px;
+        height: 65px;
         border-radius: 5px;
+        margin: 5px;
     }
     .card-team {
       @include flexCenter(column);
@@ -255,8 +256,8 @@ body {
         width: 70px;
         height: 70px;
         @media (max-width:600px){
-            width: 25px;
-            height: 25px;
+            width: 35px;
+            height: 35px;
         }
       }
       span {

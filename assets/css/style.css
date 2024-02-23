@@ -261,8 +261,9 @@ body {
 @media (max-width: 600px) {
   .matches .card-match {
     width: 150px;
-    height: 55px;
+    height: 65px;
     border-radius: 5px;
+    margin: 5px;
   }
 }
 .matches .card-match .card-team {
@@ -278,8 +279,8 @@ body {
 }
 @media (max-width: 600px) {
   .matches .card-match .card-team img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
   }
 }
 .matches .card-match .card-team span {
