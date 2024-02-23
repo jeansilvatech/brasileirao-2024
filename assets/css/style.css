@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
   transition: 0.7s;
-  overflow-x: hidden;
 }
 
 body {
@@ -53,6 +52,24 @@ body {
 
 .enter-logo {
   animation: enter-logo 3s ease-in-out;
+}
+
+.container .header .header-title {
+  height: 30px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #191970;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.container .header .header-title h1 {
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .container .header .header-teams {
@@ -132,23 +149,6 @@ body {
 .container .header .header-teams .team img {
   width: 50px;
   height: 50px;
-}
-
-.container .header .header-title {
-  height: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  background-color: #191970;
-  color: #ffffff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.container .header .header-title h1 {
-  font-size: 17px;
-  font-weight: 300;
-  text-transform: uppercase;
 }
 
 .enter-page {
