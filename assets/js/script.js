@@ -3,14 +3,35 @@ const res = await fetch("../data/teams.json")
 const data = await res.json();
 const loaderScreen = document.querySelector('.loader-screen')
 const page = document.querySelector('.container')
-const logo = document.querySelector('.header-logo img')
+const logo = document.querySelector('.header-logo img');
+const btnPrevious = document.querySelector('.btn-prev');
+const btnNext = document.querySelector('.btn-next');
+const roundText = document.querySelector('.round h2');
+const contentMatches = document.querySelector('.matches')
 let dataMatches = [];
+let roundNumber = 1;
+let numberOfRound = 0;
+
 async function api(){
   const res = await fetch("../data/matches.json")
   dataMatches = await res.json();
-  return console.log(dataMatches)
+  render(dataMatches[numberOfRound].matches)
 }
-api()
+btnPrevious.addEventListener('click', ()=>{
+  roundNumber--
+  numberOfRound--
+  render(dataMatches[numberOfRound].matches)
+  btnVisible(roundNumber)
+  roundText.innerText = `${roundNumber}ª rodada`
+})
+btnNext.addEventListener('click', ()=>{
+  roundNumber++
+  numberOfRound++
+  render(dataMatches[numberOfRound].matches)
+  btnVisible(roundNumber)
+  roundText.innerText = `${roundNumber}ª rodada`
+})
+
 function loader(){
   setTimeout(()=>{
     loaderScreen.style.display = 'none'
@@ -19,6 +40,27 @@ function loader(){
   },5000)
 }
 loader()
+let render = (dataMatches)=>{
+  const responseApi = dataMatches.map((match)=>{
+    return `
+    <div class="card-match">
+    <div class="card-team">
+        <img src="./assets/img/${match.principal}.svg" alt="">
+        <span>${match.principal}</span>
+    </div>
+    <div class="versus">
+        <i class="fa-solid fa-x"></i>
+    </div>
+    <div class="card-team">
+        <img src="./assets/img/${match.visitor}.svg" alt="">
+        <span>${match.visitor}</span>
+    </div>
+    <div class="gradient-card"></div>
+    </div>
+    `
+  }).join("")
+  contentMatches.innerHTML = responseApi
+}
 data.forEach(team => {
     headerTeams.innerHTML += `
         <div class="keen-slider__slide team ${team.url}">
@@ -26,6 +68,21 @@ data.forEach(team => {
         </div>
     `
 });
+function btnVisible(valueRound){
+    switch(valueRound){
+      case 1:
+        btnPrevious.style.visibility = 'hidden';
+        break;
+        case 38:
+          btnNext.style.visibility = 'hidden';
+          break;
+          default:
+            btnPrevious.style.visibility = 'visible';
+            btnNext.style.visibility = 'visible';
+    }
+}
+
+
 var slider = new KeenSlider("#my-keen-slider", {
     breakpoints: {
       "(min-width: 320px)": {
@@ -69,6 +126,4 @@ var slider = new KeenSlider("#my-keen-slider", {
     )
     
   })
-// const beforeCard = document.styleSheets[1].cssRules[7]
-// beforeCard.style.backgroundColor = "#000"
-// console.log(document.styleSheets[1].cssRules[7])
+  api()
