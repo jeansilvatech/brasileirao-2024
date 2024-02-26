@@ -8,10 +8,10 @@ const btnPrevious = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
 const roundText = document.querySelector('.round h2');
 const contentMatches = document.querySelector('.matches')
+const cardMatch = document.querySelectorAll('.card-match')
 let dataMatches = [];
 let roundNumber = 1;
 let numberOfRound = 0;
-
 async function api(){
   const res = await fetch("../data/matches.json")
   dataMatches = await res.json();
@@ -30,8 +30,11 @@ btnNext.addEventListener('click', ()=>{
   render(dataMatches[numberOfRound].matches)
   btnVisible(roundNumber)
   roundText.innerText = `${roundNumber}ª rodada`
+  console.log(dataMatches[numberOfRound].matches)
 })
-
+function cardFav(){
+  
+}
 function loader(){
   setTimeout(()=>{
     loaderScreen.style.display = 'none'
@@ -39,11 +42,37 @@ function loader(){
     page.classList.add('enter-page')
   },5000)
 }
+
 loader()
+data.map((team) => {
+//  if(team.url === localStorage.fav){
+//   team.sort(localStorage.fav)
+//  }
+    headerTeams.innerHTML += `
+        <div class="keen-slider__slide team ${team.url}">
+            <img src="./assets/img/${team.url}.svg" alt="escudo do ${team.name}">
+        </div>
+    `
+});
+const team = document.querySelectorAll('.team')
+
+  team.forEach(equip =>{
+  
+    if(localStorage.fav === equip.classList[2]){
+      equip.style.backgroundColor = "#ffffff"
+    }
+    equip.addEventListener('click', ()=>{
+      equip.style.backgroundColor = "#ffffff"
+      localStorage.fav = equip.classList[2]
+    }
+    
+    )
+    
+  })
 let render = (dataMatches)=>{
   const responseApi = dataMatches.map((match)=>{
     return `
-    <div class="card-match">
+    <div class="card-match ${localStorage.fav===match.principal || localStorage.fav===match.visitor?'team-fav':''}">
     <div class="card-team">
         <img src="./assets/img/${match.principal}.svg" alt="">
         <span>${match.principal}</span>
@@ -61,13 +90,6 @@ let render = (dataMatches)=>{
   }).join("")
   contentMatches.innerHTML = responseApi
 }
-data.forEach(team => {
-    headerTeams.innerHTML += `
-        <div class="keen-slider__slide team ${team.url}">
-            <img src="./assets/img/${team.url}.svg" alt="escudo do ${team.name}">
-        </div>
-    `
-});
 function btnVisible(valueRound){
     switch(valueRound){
       case 1:
@@ -110,20 +132,6 @@ var slider = new KeenSlider("#my-keen-slider", {
         perView: 1
     },
   })
-  const team = document.querySelectorAll('.team')
-
-  team.forEach(equip =>{
   
-    if(localStorage.fav == equip.classList[2]){
-      equip.style.backgroundColor = "#ffffff"
-    }
-    equip.addEventListener('click', ()=>{
-      equip.style.backgroundColor = "#ffffff"
-      localStorage.fav = equip.classList[2]
-      
-    }
-    
-    )
-    
-  })
+  
   api()

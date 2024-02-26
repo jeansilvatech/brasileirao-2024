@@ -59,8 +59,8 @@
     "matches": [
       {
         "match": 1,
-        "principal": "Atletico",
-        "visitor": "Palmeiras"
+        "principal": "atletico",
+        "visitor": "atletico-go"
       },
       {
         "match": 2,
@@ -115,7 +115,7 @@
       {
         "match": 1,
         "principal": "Cruzeiro",
-        "visitor": "Palmeiras"
+        "visitor": "atletico"
       },
       {
         "match": 2,

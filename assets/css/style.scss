@@ -115,7 +115,7 @@ body {
     &::before {
       content: "";
       background-color: $default;
-      background-image: url("../img/fav.png");
+      background-image: url("../img/fav.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -127,10 +127,14 @@ body {
       right: 10px;
       transition: 0.5s;
       display: none;
+      @media (max-width:600px){
+        bottom: 0;
+        left: 0;
+      }
     }
     &:hover:before {
       font-size: 10px;
-      background-color: $primary;
+      background-color: transparent;
       display: block;
       width: 25px;
       height: 25px;
@@ -226,7 +230,6 @@ body {
       font-size: 40px;
       font-weight: 400;
       @media (max-width:600px){
-        padding: 0;
           font-size: 15px;
       }
   }
@@ -257,7 +260,6 @@ body {
         width: 150px;
         height: 65px;
         border-radius: 5px;
-        margin: 5px;
     }
     .card-team {
       @include flexCenter(column);
@@ -317,7 +319,7 @@ body {
   height: 50px;
   text-align: center;
   cursor: pointer;
-  animation: enter-page 3s linear;
+  animation: enter-page 3s linear infinite;
   @media (max-width:600px){
     width: 40px;
     height: 40px;
@@ -326,11 +328,32 @@ body {
     font-size: 35px;
     margin: 10px;
     @media (max-width:600px){
-      font-size: 20px;
+      font-size: 25px;
   }
   }
   &:hover{
     scale: 1.1;
+  }
+}
+.team-fav{
+  background-color: $secondary !important;
+}
+.team-fav::after{
+  content: '';
+  position: absolute;
+  background-image: url("../img/fav.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 30px;
+  height:30px;
+  transform: translateY( -77px);
+  background-color: #004b23;
+  border-radius: 50%;
+  @media (max-width:600px){
+    width: 20px;
+    height:20px;
+    transform: translateY(-31px);
   }
 }
 @media (max-width:600px){

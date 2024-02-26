@@ -117,7 +117,7 @@ body {
 .container .header .header-teams .team::before {
   content: "";
   background-color: #ffffff;
-  background-image: url("../img/fav.png");
+  background-image: url("../img/fav.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -130,9 +130,15 @@ body {
   transition: 0.5s;
   display: none;
 }
+@media (max-width: 600px) {
+  .container .header .header-teams .team::before {
+    bottom: 0;
+    left: 0;
+  }
+}
 .container .header .header-teams .team:hover:before {
   font-size: 10px;
-  background-color: #001845;
+  background-color: transparent;
   display: block;
   width: 25px;
   height: 25px;
@@ -233,7 +239,6 @@ body {
 }
 @media (max-width: 600px) {
   .round h2 {
-    padding: 0;
     font-size: 15px;
   }
 }
@@ -274,7 +279,6 @@ body {
     width: 150px;
     height: 65px;
     border-radius: 5px;
-    margin: 5px;
   }
 }
 .matches .card-match .card-team {
@@ -346,7 +350,7 @@ body {
   height: 50px;
   text-align: center;
   cursor: pointer;
-  animation: enter-page 3s linear;
+  animation: enter-page 3s linear infinite;
 }
 @media (max-width: 600px) {
   .btn-prev, .btn-next {
@@ -360,11 +364,36 @@ body {
 }
 @media (max-width: 600px) {
   .btn-prev i, .btn-next i {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 .btn-prev:hover, .btn-next:hover {
   scale: 1.1;
+}
+
+.team-fav {
+  background-color: #004b23 !important;
+}
+
+.team-fav::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/fav.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-77px);
+  background-color: #004b23;
+  border-radius: 50%;
+}
+@media (max-width: 600px) {
+  .team-fav::after {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-31px);
+  }
 }
 
 @media (max-width: 600px) {
