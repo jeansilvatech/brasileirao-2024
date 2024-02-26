@@ -45,9 +45,6 @@ function loader(){
 
 loader()
 data.map((team) => {
-//  if(team.url === localStorage.fav){
-//   team.sort(localStorage.fav)
-//  }
     headerTeams.innerHTML += `
         <div class="keen-slider__slide team ${team.url}">
             <img src="./assets/img/${team.url}.svg" alt="escudo do ${team.name}">
@@ -57,11 +54,12 @@ data.map((team) => {
 const team = document.querySelectorAll('.team')
 
   team.forEach(equip =>{
-  
+    
     if(localStorage.fav === equip.classList[2]){
       equip.style.backgroundColor = "#ffffff"
     }
     equip.addEventListener('click', ()=>{
+      equip.style.backgroundColor = "transparent"
       equip.style.backgroundColor = "#ffffff"
       localStorage.fav = equip.classList[2]
     }

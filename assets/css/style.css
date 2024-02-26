@@ -123,7 +123,6 @@ body {
   background-position: center;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
   position: absolute;
   bottom: 0;
   right: 10px;
@@ -139,9 +138,16 @@ body {
 .container .header .header-teams .team:hover:before {
   font-size: 10px;
   background-color: transparent;
-  display: block;
-  width: 25px;
-  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  bottom: 0;
+  right: 0;
+  background-color: #001845;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
   transition: 0.5s;
 }
 @media screen and (max-width: 600px) {
@@ -150,9 +156,6 @@ body {
   }
   .container .header .header-teams .team:hover {
     scale: 1;
-  }
-  .container .header .header-teams .team:hover:before {
-    transform: translate(0px, -15px);
   }
 }
 .container .header .header-teams .team img {

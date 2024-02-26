@@ -121,7 +121,6 @@ body {
       background-position: center;
       width: 20px;
       height: 20px;
-      border-radius: 50%;
       position: absolute;
       bottom: 0;
       right: 10px;
@@ -135,9 +134,13 @@ body {
     &:hover:before {
       font-size: 10px;
       background-color: transparent;
-      display: block;
-      width: 25px;
-      height: 25px;
+      @include flexCenter(row);
+      bottom: 0;
+      right: 0;
+      background-color: $primary;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
       transition: 0.5s;
     }
     @media screen {
@@ -148,9 +151,7 @@ body {
         &:hover {
           scale: 1;
         }
-        &:hover:before {
-          transform: translate(0px, -15px);
-        }
+        
       }
     }
     img {
