@@ -39,6 +39,7 @@ function loader(displayState, time){
     loaderScreen.style.display = displayState
     logo.classList.add('enter-logo')
     page.classList.add('enter-page')
+    contentMatches.classList.add('enter-cards')
   },time)
 }
 
