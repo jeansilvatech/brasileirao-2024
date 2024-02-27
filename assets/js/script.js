@@ -8,7 +8,7 @@ const btnPrevious = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
 const roundText = document.querySelector('.round h2');
 const contentMatches = document.querySelector('.matches')
-const cardMatch = document.querySelectorAll('.card-match')
+
 let dataMatches = [];
 let roundNumber = 1;
 let numberOfRound = 0;
@@ -30,20 +30,17 @@ btnNext.addEventListener('click', ()=>{
   render(dataMatches[numberOfRound].matches)
   btnVisible(roundNumber)
   roundText.innerText = `${roundNumber}ª rodada`
-  console.log(dataMatches[numberOfRound].matches)
 })
-function cardFav(){
-  
-}
-function loader(){
+
+function loader(displayState, time){
   setTimeout(()=>{
-    loaderScreen.style.display = 'none'
+    loaderScreen.style.display = displayState
     logo.classList.add('enter-logo')
     page.classList.add('enter-page')
-  },5000)
+  },time)
 }
 
-loader()
+loader('none', 1000)
 data.map((team) => {
     headerTeams.innerHTML += `
         <div class="keen-slider__slide team ${team.url}">
@@ -51,36 +48,21 @@ data.map((team) => {
         </div>
     `
 });
-const team = document.querySelectorAll('.team')
 
-  team.forEach(equip =>{
-    
-    if(localStorage.fav === equip.classList[2]){
-      equip.style.backgroundColor = "#ffffff"
-    }
-    equip.addEventListener('click', ()=>{
-      equip.style.backgroundColor = "transparent"
-      equip.style.backgroundColor = "#ffffff"
-      localStorage.fav = equip.classList[2]
-    }
-    
-    )
-    
-  })
 let render = (dataMatches)=>{
   const responseApi = dataMatches.map((match)=>{
     return `
-    <div class="card-match ${localStorage.fav===match.principal || localStorage.fav===match.visitor?'team-fav':''}">
+    <div class="card-match ${localStorage.fav===match.principal || localStorage.fav===match.visitor?`team-fav ${localStorage.fav}`:''}">
     <div class="card-team">
         <img src="./assets/img/${match.principal}.svg" alt="">
-        <span>${match.principal}</span>
+        <span>${match.principal.replace("-", " ")}</span>
     </div>
     <div class="versus">
         <i class="fa-solid fa-x"></i>
     </div>
     <div class="card-team">
         <img src="./assets/img/${match.visitor}.svg" alt="">
-        <span>${match.visitor}</span>
+        <span>${match.visitor.replace("-", " ")}</span>
     </div>
     <div class="gradient-card"></div>
     </div>
@@ -88,17 +70,38 @@ let render = (dataMatches)=>{
   }).join("")
   contentMatches.innerHTML = responseApi
 }
+api()
+const cardMatch = document.querySelectorAll('.card-match')
+const team = document.querySelectorAll('.team')
+
+function btnClick(btn){
+  btn.addEventListener('click', ()=>{
+    team.forEach(equip=>{
+        equip.classList.remove('fav')
+    })
+    
+    localStorage.fav = btn.classList[2]
+    btn.classList.add("fav")
+    location.reload() 
+  })
+}
+  team.forEach(equip =>{
+    if(localStorage.fav === equip.classList[2]){
+      equip.classList.add('fav')
+    }
+    btnClick(equip)
+  })
 function btnVisible(valueRound){
     switch(valueRound){
       case 1:
         btnPrevious.style.visibility = 'hidden';
         break;
-        case 38:
-          btnNext.style.visibility = 'hidden';
-          break;
-          default:
-            btnPrevious.style.visibility = 'visible';
-            btnNext.style.visibility = 'visible';
+      case 38:
+        btnNext.style.visibility = 'hidden';
+        break;
+      default:
+        btnPrevious.style.visibility = 'visible';
+        btnNext.style.visibility = 'visible';
     }
 }
 
@@ -132,4 +135,4 @@ var slider = new KeenSlider("#my-keen-slider", {
   })
   
   
-  api()
+  
