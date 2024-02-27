@@ -8,7 +8,7 @@ const btnPrevious = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
 const roundText = document.querySelector('.round h2');
 const contentMatches = document.querySelector('.matches')
-
+const iconDrag = document.querySelector('.icon-drag')
 let dataMatches = [];
 let roundNumber = 1;
 let numberOfRound = 0;
@@ -31,7 +31,9 @@ btnNext.addEventListener('click', ()=>{
   btnVisible(roundNumber)
   roundText.innerText = `${roundNumber}ª rodada`
 })
-
+headerTeams.addEventListener('touchstart', ()=>{
+  iconDrag.style.display = 'none'
+})
 function loader(displayState, time){
   setTimeout(()=>{
     loaderScreen.style.display = displayState
