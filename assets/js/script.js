@@ -82,7 +82,6 @@ function btnClick(btn){
     team.forEach(equip=>{
         equip.classList.remove('fav')
     })
-    
     localStorage.fav = btn.classList[2]
     btn.classList.add("fav")
     location.reload() 
