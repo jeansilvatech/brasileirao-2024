@@ -177,7 +177,7 @@ body {
 }
 @keyframes enter-cards {
   0%{
-    transform: translateY(100px);
+    transform: translateY(20px);
   }
   100%{
     transform: translateY(0px);
@@ -404,7 +404,7 @@ body {
   width: 30px;
   height:30px;
   transform: translateY( -77px);
-  background-color: #004b23;
+  background-color: $secondary;
   border-radius: 50%;
   @media (max-width:600px){
     width: 20px;

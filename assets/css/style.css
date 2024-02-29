@@ -184,7 +184,7 @@ body {
 
 @keyframes enter-cards {
   0% {
-    transform: translateY(100px);
+    transform: translateY(20px);
   }
   100% {
     transform: translateY(0px);
