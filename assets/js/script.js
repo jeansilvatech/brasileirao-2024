@@ -56,14 +56,14 @@ let render = (dataMatches)=>{
   const responseApi = dataMatches.map((match)=>{
     return `
     <div class="card-match ${localStorage.fav===match.principal || localStorage.fav===match.visitor?`team-fav ${localStorage.fav}`:''}">
-    <div class="card-team">
+    <div class="card-team principal">
         <img src="./assets/img/${match.principal}.svg" alt="">
         <span>${match.principal.replace("-", " ")}</span>
     </div>
     <div class="versus">
         <i class="fa-solid fa-x"></i>
     </div>
-    <div class="card-team">
+    <div class="card-team visitor">
         <img src="./assets/img/${match.visitor}.svg" alt="">
         <span>${match.visitor.replace("-", " ")}</span>
     </div>
