@@ -189,7 +189,7 @@
       },
       {
         "match": 5,
-        "principal": "Vasco",
+        "principal": "vasco",
         "visitor": "criciúma"
       },
       {
@@ -299,7 +299,7 @@
       },
       {
         "match": 5,
-        "principal": "Vasco",
+        "principal": "vasco",
         "visitor": "vitória"
       },
       {
@@ -354,7 +354,7 @@
       },
       {
         "match": 5,
-        "principal": "Vasco",
+        "principal": "vasco",
         "visitor": "flamengo"
       },
       {
@@ -1235,7 +1235,7 @@
       {
         "match": 5,
         "principal": "criciúma",
-        "visitor": "Vasco"
+        "visitor": "vasco"
       },
       {
         "match": 6,
@@ -1345,7 +1345,7 @@
       {
         "match": 5,
         "principal": "vitória",
-        "visitor": "Vasco"
+        "visitor": "vasco"
       },
       {
         "match": 6,
@@ -1400,7 +1400,7 @@
       {
         "match": 5,
         "principal": "flamengo",
-        "visitor": "Vasco"
+        "visitor": "vasco"
       },
       {
         "match": 6,
