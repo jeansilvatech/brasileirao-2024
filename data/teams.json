@@ -7,7 +7,7 @@
     {
         "id":2,
         "name":"atlético-go",
-        "url":"atletico-go"
+        "url":"atlético-go"
     },
     {
         "id":3,
@@ -42,12 +42,12 @@
     {
         "id":9,
         "name":"criciúma",
-        "url":"criciuma"
+        "url":"criciúma"
     },
     {
         "id":10,
         "name":"cuiabá",
-        "url":"cuiaba"
+        "url":"cuiabá"
     },
     {
         "id":11,
@@ -67,7 +67,7 @@
     {
         "id":14,
         "name":"grêmio",
-        "url":"gremio"
+        "url":"grêmio"
     },
     {
         "id":15,
@@ -97,6 +97,6 @@
     {
         "id":20,
         "name":"vitória",
-        "url":"vitoria"
+        "url":"vitória"
     }
 ]
