@@ -488,15 +488,15 @@ body {
 
 .team-fav {
   background-color: #004b23 !important;
-  animation: card-team-fav 3s ease-in-out infinite !important;
+  animation: team-fav 3s ease-in-out infinite !important;
 }
 
-@keyframes card-team-fav {
+@keyframes team-fav {
   0%, 100% {
     scale: 1;
   }
   50% {
-    scale: 1.1;
+    scale: 1.05;
   }
 }
 .team-fav::after {
@@ -522,6 +522,30 @@ body {
 
 .fav {
   background-color: #004b23 !important;
+}
+
+footer {
+  width: 100%;
+  padding: 10px;
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: enter-page 2s linear;
+}
+footer p {
+  color: #0a0a0a;
+}
+@media (max-width: 600px) {
+  footer p {
+    font-size: 11px;
+  }
+}
+footer p a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight: 800;
 }
 
 @media (max-width: 600px) {

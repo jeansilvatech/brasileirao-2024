@@ -425,14 +425,14 @@ body {
 }
 .team-fav{
   background-color: $secondary !important;
-  animation: card-team-fav 3s ease-in-out infinite !important;
+  animation: team-fav 3s ease-in-out infinite !important;
 }
-@keyframes card-team-fav {
+@keyframes team-fav {
   0%,100%{
     scale: 1;
   }
   50%{
-    scale: 1.1;
+    scale: 1.05;
   }
 }
 .team-fav::after{
@@ -455,6 +455,24 @@ body {
 }
 .fav{
   background-color: $secondary !important;
+}
+footer{
+  width: 100%;
+  padding: 10px;
+  background-color: $bgcolor;
+  @include flexCenter(column);
+  animation: enter-page 2s linear;
+  p{
+    color:$text-primary;
+    @media (max-width:600px){
+      font-size: 11px;
+    }
+    a{
+      text-decoration: none;
+      color: $text-primary;
+      font-weight: 800;
+    }
+  }
 }
 @media (max-width:600px){
  body{
