@@ -488,8 +488,17 @@ body {
 
 .team-fav {
   background-color: #004b23 !important;
+  animation: card-team-fav 3s ease-in-out infinite !important;
 }
 
+@keyframes card-team-fav {
+  0%, 100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+}
 .team-fav::after {
   content: "";
   position: absolute;
