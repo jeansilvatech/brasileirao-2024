@@ -124,7 +124,9 @@ body {
 }
 @media (max-width: 600px) {
   .container .header .header-teams .team {
-    margin: 5px 0 5px 0;
+    margin: 0;
+    padding: 10px;
+    border-radius: 0;
   }
 }
 .container .header .header-teams .team:hover {
@@ -154,7 +156,6 @@ body {
 }
 .container .header .header-teams .team:hover:before {
   font-size: 10px;
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,6 +167,11 @@ body {
   width: 100%;
   height: 100%;
   transition: 0.5s;
+}
+@media (max-width: 600px) {
+  .container .header .header-teams .team:hover:before {
+    border-radius: 0;
+  }
 }
 @media screen and (max-width: 600px) {
   .container .header .header-teams .team::before {
