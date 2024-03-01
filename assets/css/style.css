@@ -171,6 +171,7 @@ body {
 @media (max-width: 600px) {
   .container .header .header-teams .team:hover:before {
     border-radius: 0;
+    display: none;
   }
 }
 @media screen and (max-width: 600px) {

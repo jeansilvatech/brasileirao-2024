@@ -156,6 +156,7 @@ body {
       transition: 0.5s;
       @media (max-width:600px){
         border-radius:0;
+        display: none;
       }
     }
     @media screen {
