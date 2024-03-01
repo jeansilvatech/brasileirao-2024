@@ -255,7 +255,7 @@ body {
   text-align: center;
   h2{
       color: $text-primary;
-      padding-top: 10px;
+      margin: 5px;
       text-transform: uppercase;
       font-size: 40px;
       font-weight: 400;
@@ -376,6 +376,7 @@ body {
 .btn-prev{
   visibility: hidden;
   animation: arrow-prev 4s linear infinite;
+  margin: 5px;
 }
 .btn-next{
   animation: arrow-next 4s linear infinite;
@@ -393,6 +394,9 @@ body {
     background-color: $primary;
     color: $default;
     scale: 1.05;
+    @media (max-width:600px){
+      scale: 1;
+  }
   }
   @media (max-width:600px){
     width: 40px;
