@@ -426,10 +426,6 @@ body {
   pointer-events: none;
   transform: translateY(40px);
 }
-.matches .card-match .gradient-card:hover {
-  width: 250px;
-  height: 160px;
-}
 @media (max-width: 600px) {
   .matches .card-match .gradient-card {
     width: 150px;
@@ -491,16 +487,7 @@ body {
   background-color: #004b23 !important;
   animation: team-fav 3s ease-in-out infinite !important;
 }
-
-@keyframes team-fav {
-  0%, 100% {
-    scale: 1;
-  }
-  50% {
-    scale: 1.05;
-  }
-}
-.team-fav::after {
+.team-fav:after {
   content: "";
   position: absolute;
   background-image: url("../img/fav.svg");
@@ -512,17 +499,40 @@ body {
   transform: translateY(-77px);
   background-color: #004b23;
   border-radius: 50%;
+  transition: 1s;
 }
 @media (max-width: 600px) {
-  .team-fav::after {
+  .team-fav:after {
     width: 20px;
     height: 20px;
     transform: translateY(-31px);
   }
 }
+.team-fav:hover::after {
+  width: 55px;
+  height: 55px;
+  transform: translateY(0px);
+  background-color: transparent;
+  z-index: 11;
+}
+@media (max-width: 600px) {
+  .team-fav:hover::after {
+    width: 30px;
+    height: 30px;
+  }
+}
 
+@keyframes team-fav {
+  0%, 100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+}
 .fav {
   background-color: #004b23 !important;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 footer {
