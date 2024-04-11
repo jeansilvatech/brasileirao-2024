@@ -43,7 +43,7 @@ function loader(displayState, time){
   },time)
 }
 
-loader('none', 1000)
+loader('none', 500)
 data.map((team) => {
     headerTeams.innerHTML += `
         <div class="keen-slider__slide team ${team.url}">
@@ -74,7 +74,6 @@ let render = (dataMatches)=>{
   contentMatches.innerHTML = responseApi
 }
 api()
-const cardMatch = document.querySelectorAll('.card-match')
 const team = document.querySelectorAll('.team')
 
 function btnClick(btn){
@@ -84,7 +83,7 @@ function btnClick(btn){
     })
     localStorage.fav = btn.classList[2]
     btn.classList.add("fav")
-    location.reload() 
+    location.reload()
   })
 }
   team.forEach(equip =>{

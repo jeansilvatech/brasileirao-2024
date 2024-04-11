@@ -80,6 +80,9 @@ body {
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
+    &::selection{
+      background-color:$secondary;
+    }
   }
 }
 
@@ -125,6 +128,7 @@ body {
       scale: 1.03;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
+    
     &::before {
       content: "";
       background-color: $default;
@@ -144,7 +148,8 @@ body {
         left: 0;
       }
     }
-    &:hover:before {
+    
+    &:hover::before {
       font-size: 10px;
       @include flexCenter(row);
       bottom: 0;
@@ -274,6 +279,10 @@ body {
       text-transform: uppercase;
       font-size: 40px;
       font-weight: 400;
+      &::selection{
+        background-color:$secondary;
+        color: $default;
+      }
       @media (max-width:600px){
           font-size: 17px;
           font-weight: 700;
@@ -466,6 +475,19 @@ body {
 .fav{
   background-color: $secondary !important;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+  border-radius: 10px 10px 0 0 !important;
+  &::after{
+      content: 'Meu time';
+      width: 100%;
+      background-color: $primary;
+      height: 20px;
+      border-radius: 0 0 10px 10px;
+      position: absolute;
+      bottom: -18px;
+      font-size: 11px;
+      @include flexCenter(row)
+  }
 }
 footer{
   width: 100%;
