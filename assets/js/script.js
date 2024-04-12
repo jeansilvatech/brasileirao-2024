@@ -1,4 +1,4 @@
-const headerTeams = document.querySelector('.header-teams')
+const headerTeams = document.querySelector('.keen-slider')
 const res = await fetch("../data/teams.json")
 const data = await res.json();
 const loaderScreen = document.querySelector('.loader-screen')
@@ -44,13 +44,15 @@ function loader(displayState, time){
 }
 
 loader('none', 500)
-data.map((team) => {
-    headerTeams.innerHTML += `
-        <div class="keen-slider__slide team ${team.url}">
-            <img src="./assets/img/${team.url}.svg" alt="escudo do ${team.name}">
-        </div>
-    `
-});
+function renderHeader(){
+  data.map((team) => {
+      headerTeams.innerHTML += `
+          <div class="keen-slider__slide team ${team.url}">
+              <img src="./assets/img/${team.url}.svg" alt="escudo do ${team.name}">
+          </div>
+      `
+  });
+}
 
 let render = (dataMatches)=>{
   const responseApi = dataMatches.map((match)=>{
@@ -74,6 +76,7 @@ let render = (dataMatches)=>{
   contentMatches.innerHTML = responseApi
 }
 api()
+renderHeader()
 const team = document.querySelectorAll('.team')
 
 function btnClick(btn){

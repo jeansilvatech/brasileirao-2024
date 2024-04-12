@@ -118,12 +118,19 @@ body {
     max-width: 60px !important;
     border-radius: 10px;
     background-color: transparent;
+    position: relative;
     cursor: pointer;
-    @media (max-width: 600px) {
-      margin: 0;
-      padding: 10px;
-      border-radius:0;
-    }
+    &:hover::after{
+      content: 'Meu time';
+      width: 100%;
+      background-color: $primary;
+      height: 20px;
+      border-radius: 0 0 10px 10px;
+      position: absolute;
+      bottom: -18px;
+      font-size: 11px;
+      @include flexCenter(row);
+  }
     &:hover {
       scale: 1.03;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -155,7 +162,7 @@ body {
       bottom: 0;
       right: 0;
       background-color: $secondary;
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0;
       width: 100%;
       height: 100%;
       transition: 0.5s;
@@ -486,7 +493,7 @@ body {
       position: absolute;
       bottom: -18px;
       font-size: 11px;
-      @include flexCenter(row)
+      @include flexCenter(row);
   }
 }
 footer{
