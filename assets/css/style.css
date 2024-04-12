@@ -19,6 +19,11 @@ body {
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 200px) {
+  .container {
+    height: auto;
+  }
+}
 
 .header .icon-drag {
   display: flex;
@@ -32,6 +37,11 @@ body {
   .header .icon-drag {
     display: flex;
     position: absolute;
+  }
+}
+@media (max-width: 200px) {
+  .header .icon-drag {
+    display: none;
   }
 }
 .header .icon-drag img {
@@ -55,12 +65,23 @@ body {
     height: 80px;
   }
 }
+@media (max-width: 200px) {
+  .container .header .header-logo {
+    height: 25px;
+  }
+}
 .container .header .header-logo img {
   width: 95px;
 }
 @media (max-width: 600px) {
   .container .header .header-logo img {
     width: 70px;
+  }
+}
+@media (max-width: 200px) {
+  .container .header .header-logo img {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -80,17 +101,28 @@ body {
   color: #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+@media (max-width: 200px) {
+  .container .header .header-title {
+    height: 10px;
+  }
+}
 .container .header .header-title h1 {
   font-size: 17px;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 .container .header .header-title h1::-moz-selection {
   background-color: #004b23;
 }
 .container .header .header-title h1::selection {
   background-color: #004b23;
+}
+@media (max-width: 200px) {
+  .container .header .header-title h1 {
+    font-size: 5px;
+  }
 }
 
 .container .header .header-teams {
@@ -103,7 +135,12 @@ body {
   align-items: center;
   flex-direction: row;
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 200px) {
+  .container .header .header-teams {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 600px) {
   .container .header .header-teams::before {
     content: "";
     width: 50px;
@@ -124,10 +161,16 @@ body {
   padding: 5px 10px 5px 10px;
   margin: 10px 0 10px 0;
   max-width: 60px !important;
+  min-width: 60px !important;
   border-radius: 10px;
   background-color: transparent;
   position: relative;
   cursor: pointer;
+}
+@media (max-width: 200px) {
+  .container .header .header-teams .team {
+    min-width: 25px !important;
+  }
 }
 .container .header .header-teams .team:hover::after {
   content: "Meu time";
@@ -143,9 +186,19 @@ body {
   align-items: center;
   flex-direction: row;
 }
+@media (max-width: 200px) {
+  .container .header .header-teams .team:hover::after {
+    display: none;
+  }
+}
 .container .header .header-teams .team:hover {
   scale: 1.03;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media (max-width: 200px) {
+  .container .header .header-teams .team:hover {
+    scale: 1;
+  }
 }
 .container .header .header-teams .team::before {
   content: "";
@@ -188,7 +241,7 @@ body {
     display: none;
   }
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .container .header .header-teams .team::before {
     right: 25px;
   }
@@ -208,6 +261,12 @@ body {
   .container .header .header-teams .team img {
     width: 40px;
     height: 40px;
+  }
+}
+@media (max-width: 200px) {
+  .container .header .header-teams .team img {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -324,6 +383,12 @@ body {
     font-weight: 700;
   }
 }
+@media (max-width: 200px) {
+  .round h2 {
+    font-size: 9px;
+    margin: 0;
+  }
+}
 
 .matches {
   width: 100%;
@@ -353,6 +418,7 @@ body {
 .matches .card-match {
   width: 250px;
   height: 160px;
+  position: relative;
   background-color: #001845;
   display: flex;
   justify-content: center;
@@ -442,18 +508,21 @@ body {
 .matches .card-match .gradient-card {
   position: absolute;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-  width: 250px;
+  width: 100%;
   height: 80px;
   border-radius: 0 0 20px 20px;
   pointer-events: none;
-  transform: translateY(40px);
+  bottom: 0;
 }
 @media (max-width: 600px) {
   .matches .card-match .gradient-card {
-    width: 150px;
     height: 55px;
-    transform: translateY(5px);
     border-radius: 0 0 5px 5px;
+  }
+}
+@media (max-width: 200px) {
+  .matches .card-match .gradient-card {
+    height: 15px;
   }
 }
 
@@ -496,12 +565,23 @@ body {
     height: 35px;
   }
 }
+@media (max-width: 200px) {
+  .btn-prev, .btn-next {
+    width: 15px;
+    height: 15px;
+  }
+}
 .btn-prev i, .btn-next i {
   font-size: 30px;
 }
 @media (max-width: 600px) {
   .btn-prev i, .btn-next i {
     font-size: 25px;
+  }
+}
+@media (max-width: 200px) {
+  .btn-prev i, .btn-next i {
+    font-size: 10px;
   }
 }
 
@@ -558,6 +638,11 @@ body {
   position: relative;
   border-radius: 10px 10px 0 0 !important;
 }
+@media (max-width: 200px) {
+  .fav {
+    border-radius: 1px !important;
+  }
+}
 .fav::after {
   content: "Meu time";
   width: 100%;
@@ -571,6 +656,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+@media (max-width: 200px) {
+  .fav::after {
+    display: none;
+  }
 }
 
 footer {
@@ -600,5 +690,10 @@ footer p a {
 @media (max-width: 600px) {
   body {
     overflow: hidden;
+  }
+}
+@media (max-width: 600px) and (max-width: 200px) {
+  body {
+    overflow: scroll;
   }
 }/*# sourceMappingURL=style.css.map */

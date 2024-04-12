@@ -112,11 +112,18 @@ function btnVisible(valueRound){
 
 var slider = new KeenSlider("#my-keen-slider", {
     breakpoints: {
+      "(max-width: 320px)": {
+        slides: { 
+            perView:3,
+            spacing:1,
+            origin:1
+          },
+      },
       "(min-width: 320px)": {
         slides: { 
             perView: 4,
             spacing:1,
-            origin:2
+            origin:1
           },
       },
       "(min-width: 768px)": {
