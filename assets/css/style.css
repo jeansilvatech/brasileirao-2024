@@ -10,6 +10,11 @@ body {
   background-color: #d3d3d3;
   color: #ffffff;
 }
+@media (max-width: 200px) {
+  body {
+    overflow: scroll;
+  }
+}
 
 .container {
   background-color: #d3d3d3;
@@ -18,6 +23,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 @media (max-width: 200px) {
   .container {
@@ -362,6 +368,11 @@ body {
   width: 100%;
   text-align: center;
 }
+@media (max-width: 600px) {
+  .round {
+    margin-top: 10px;
+  }
+}
 .round h2 {
   color: #0a0a0a;
   margin: 5px;
@@ -531,9 +542,21 @@ body {
   animation: arrow-prev 4s linear infinite;
   margin: 5px;
 }
+@media (max-width: 600px) {
+  .btn-prev {
+    left: 20px;
+    transform: rotate(-90deg);
+  }
+}
 
 .btn-next {
   animation: arrow-next 4s linear infinite;
+}
+@media (max-width: 600px) {
+  .btn-next {
+    right: 20px;
+    transform: rotate(-90deg);
+  }
 }
 
 .btn-prev, .btn-next {
@@ -563,6 +586,8 @@ body {
   .btn-prev, .btn-next {
     width: 35px;
     height: 35px;
+    position: absolute;
+    top: 190px;
   }
 }
 @media (max-width: 200px) {
@@ -685,15 +710,4 @@ footer p a {
   text-decoration: none;
   color: #0a0a0a;
   font-weight: 800;
-}
-
-@media (max-width: 600px) {
-  body {
-    overflow: hidden;
-  }
-}
-@media (max-width: 600px) and (max-width: 200px) {
-  body {
-    overflow: scroll;
-  }
 }/*# sourceMappingURL=style.css.map */

@@ -22,6 +22,9 @@ $bgcolor: #d3d3d3;
 body {
   background-color: $bgcolor;
   color: $default;
+  @media (max-width:200px){
+    overflow: scroll;
+  }
 }
 .container {
   background-color: $bgcolor;
@@ -30,6 +33,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
   @media (max-width:200px){
     height: auto;
   }
@@ -315,6 +319,9 @@ body {
 .round{
   width: 100%;
   text-align: center;
+  @media (max-width:600px){
+    margin-top: 10px;
+  }
   h2{
       color: $text-primary;
       margin: 5px;
@@ -328,6 +335,7 @@ body {
       @media (max-width:600px){
           font-size: 17px;
           font-weight: 700;
+          
       }
       @media (max-width:200px){
         font-size: 9px;
@@ -445,9 +453,17 @@ body {
   visibility: hidden;
   animation: arrow-prev 4s linear infinite;
   margin: 5px;
+  @media (max-width:600px){
+    left: 20px;
+    transform: rotate(-90deg);
+  }
 }
 .btn-next{
   animation: arrow-next 4s linear infinite;
+  @media (max-width:600px){
+    right: 20px;
+    transform: rotate(-90deg);
+  }
 }
 .btn-prev , .btn-next{
   width: 45px;
@@ -464,11 +480,14 @@ body {
     scale: 1.05;
     @media (max-width:600px){
       scale: 1;
+      
   }
   }
   @media (max-width:600px){
     width: 35px;
     height: 35px;
+    position: absolute;
+    top:190px;
 }
 @media (max-width:200px){
   width: 15px;
@@ -567,12 +586,4 @@ footer{
       font-weight: 800;
     }
   }
-}
-@media (max-width:600px){
- body{
-  overflow: hidden;
-  @media (max-width:200px){
-    overflow: scroll;
-  }
- }
 }
