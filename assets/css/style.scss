@@ -23,7 +23,7 @@ body {
   background-color: $bgcolor;
   color: $default;
   @media (max-width:200px){
-    overflow: scroll;
+    overflow-y: auto;
   }
 }
 .container {
