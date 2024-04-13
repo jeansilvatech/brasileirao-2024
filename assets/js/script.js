@@ -109,41 +109,21 @@ function btnVisible(valueRound){
     }
 }
 
-
 var slider = new KeenSlider("#my-keen-slider", {
-    breakpoints: {
-      "(max-width: 320px)": {
-        slides: { 
-            perView:3,
-            spacing:1,
-            origin:1
-          },
-      },
-      "(min-width: 320px)": {
-        slides: { 
-            perView: 4,
-            spacing:1,
-            origin:1
-          },
-      },
-      "(min-width: 768px)": {
-        slides: { 
-          perView: 8,
-          spacing:1,
-          origin:1
-          },
-      },
-      "(min-width: 1100px)": {
-        disabled: true,
+  breakpoints: {
+    "(min-width: 400px)": {
+      slides: { perView: 2, spacing: 5 },
+    },
+    "(min-width: 1000px)": {
+      disabled: true,
         slides: { 
           perView:20
         },
-      },
     },
-    slides: {
-        perView: 1
-    },
-  })
+  },
+  slides: { perView: 1 },
+})
+
   
   
   

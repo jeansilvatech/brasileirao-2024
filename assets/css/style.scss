@@ -67,7 +67,7 @@ body {
     height: 80px;
   }
   @media (max-width:200px){
-    height: 25px;
+    height: 40px;
   }
   img {
     width: 95px;
@@ -92,7 +92,7 @@ body {
   color: $default;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   @media (max-width:200px){
-    height: 10px;
+    height: 15px;
   }
   h1 {
     font-size: 17px;
@@ -108,16 +108,20 @@ body {
     }
   }
 }
-
-.container .header .header-teams {
-  background-color: $tertiary;
+.header .nav{
   width: 100vw;
+}
+.header .nav .header-teams {
+  background-color: $tertiary;
+  width: 100%;
   position: relative;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  @media (max-width:200px){
-    padding-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width:600px){
+   justify-content: flex-start;
   }
-  @include flexCenter(row);
     @media (max-width: 600px) {
       &::before {
         content: "";
@@ -147,6 +151,7 @@ body {
     cursor: pointer;
     @media (max-width:200px){
       min-width: 25px !important;
+      border-radius: 2px;
       // padding: 1px;
       // margin: 1px;
     }
@@ -352,6 +357,9 @@ body {
   @media (max-width:600px){
     margin-top: 10px;
 }
+@media (max-width:200px){
+  margin-bottom: 30px;
+}
   @keyframes card {
     0%{
     scale: 1.05;
@@ -472,6 +480,7 @@ body {
   cursor: pointer;
   color: $text-primary;
   border-radius: 50%;
+  
   animation: enter-cards 2s linear;
   @include flexCenter(row);
   &:hover{
@@ -488,6 +497,9 @@ body {
     height: 35px;
     position: absolute;
     top:190px;
+    @media (max-width:200px){
+      top:110px;
+    }
 }
 @media (max-width:200px){
   width: 15px;
@@ -572,13 +584,17 @@ body {
 footer{
   width: 100%;
   padding: 10px;
-  background-color: $bgcolor;
+  position: absolute;
+  bottom: 0;
   @include flexCenter(column);
   animation: enter-page 2s linear;
   p{
     color:$text-primary;
     @media (max-width:600px){
       font-size: 11px;
+    }
+    @media (max-width:200px){
+      font-size: 8px;
     }
     a{
       text-decoration: none;
