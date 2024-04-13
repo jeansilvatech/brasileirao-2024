@@ -622,7 +622,7 @@ body {
 }
 @media (max-width: 600px) and (max-width: 200px) {
   .btn-prev, .btn-next {
-    top: 112px;
+    top: 115px;
   }
 }
 @media (max-width: 200px) {
