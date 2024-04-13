@@ -367,6 +367,11 @@ body {
     width: 100px;
   }
 }
+@media (max-width: 200px) {
+  .loader-screen img {
+    width: 40px;
+  }
+}
 
 .round {
   width: 100%;
@@ -374,7 +379,7 @@ body {
 }
 @media (max-width: 600px) {
   .round {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 }
 .round h2 {
@@ -601,7 +606,7 @@ body {
 }
 @media (max-width: 600px) and (max-width: 200px) {
   .btn-prev, .btn-next {
-    top: 110px;
+    top: 112px;
   }
 }
 @media (max-width: 200px) {
@@ -705,13 +710,17 @@ body {
 footer {
   width: 100%;
   padding: 10px;
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   animation: enter-page 2s linear;
+}
+@media (max-width: 200px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 footer p {
   color: #0a0a0a;

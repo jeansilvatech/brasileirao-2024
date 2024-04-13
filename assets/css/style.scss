@@ -319,13 +319,16 @@ body {
     @media (max-width:768px){
         width: 100px;
     }
+    @media (max-width:200px){
+      width: 40px;
+    }
   }
 }
 .round{
   width: 100%;
   text-align: center;
   @media (max-width:600px){
-    margin-top: 10px;
+    margin-top: 15px;
   }
   h2{
       color: $text-primary;
@@ -498,7 +501,7 @@ body {
     position: absolute;
     top:190px;
     @media (max-width:200px){
-      top:110px;
+      top:112px;
     }
 }
 @media (max-width:200px){
@@ -584,10 +587,12 @@ body {
 footer{
   width: 100%;
   padding: 10px;
-  position: absolute;
-  bottom: 0;
   @include flexCenter(column);
   animation: enter-page 2s linear;
+  @media (max-width:200px){
+    position: absolute;
+    bottom: 0;
+  }
   p{
     color:$text-primary;
     @media (max-width:600px){
