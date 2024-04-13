@@ -1,3 +1,77 @@
+@keyframes enter-cards {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes enter-logo {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes enter-page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loader-logo {
+  0%, 100% {
+    scale: 1.2;
+  }
+  50% {
+    scale: 1;
+  }
+}
+@keyframes arrow-next {
+  0%, 100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+@keyframes arrow-prev {
+  0%, 100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+@keyframes card {
+  0% {
+    scale: 1.05;
+    opacity: 0.6;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes team-fav {
+  0%, 100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+}
+@keyframes btn-mobile {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +81,7 @@
 }
 
 body {
-  background-color: #d3d3d3;
+  background-color: #f5ebe0;
   color: #ffffff;
 }
 @media (max-width: 200px) {
@@ -17,7 +91,7 @@ body {
 }
 
 .container {
-  background-color: #d3d3d3;
+  background-color: #f5ebe0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -86,8 +160,8 @@ body {
 }
 @media (max-width: 200px) {
   .container .header .header-logo img {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -288,54 +362,6 @@ body {
   animation: enter-cards 2s linear;
 }
 
-@keyframes enter-cards {
-  0% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes enter-logo {
-  0% {
-    transform: translateY(-100px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes enter-page {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes loader-logo {
-  0%, 100% {
-    scale: 1.2;
-  }
-  50% {
-    scale: 1;
-  }
-}
-@keyframes arrow-next {
-  0%, 100% {
-    transform: translateY(-5px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-}
-@keyframes arrow-prev {
-  0%, 100% {
-    transform: translateY(5px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-}
 .loader-screen {
   width: 100vw;
   height: 100vh;
@@ -383,7 +409,7 @@ body {
   }
 }
 .round h2 {
-  color: #0a0a0a;
+  color: #001845;
   margin: 5px;
   text-transform: uppercase;
   font-size: 40px;
@@ -428,16 +454,6 @@ body {
 @media (max-width: 200px) {
   .matches {
     margin-bottom: 30px;
-  }
-}
-@keyframes card {
-  0% {
-    scale: 1.05;
-    opacity: 0.6;
-  }
-  100% {
-    scale: 1;
-    opacity: 1;
   }
 }
 .matches .card-match {
@@ -559,7 +575,6 @@ body {
 @media (max-width: 600px) {
   .btn-prev {
     left: 20px;
-    transform: rotate(-90deg);
   }
 }
 
@@ -569,7 +584,6 @@ body {
 @media (max-width: 600px) {
   .btn-next {
     right: 20px;
-    transform: rotate(-90deg);
   }
 }
 
@@ -578,7 +592,7 @@ body {
   height: 45px;
   text-align: center;
   cursor: pointer;
-  color: #0a0a0a;
+  color: #001845;
   border-radius: 50%;
   animation: enter-cards 2s linear;
   display: flex;
@@ -602,6 +616,8 @@ body {
     height: 35px;
     position: absolute;
     top: 190px;
+    transform: rotate(-90deg);
+    animation: btn-mobile 2s ease-in-out;
   }
 }
 @media (max-width: 600px) and (max-width: 200px) {
@@ -668,14 +684,6 @@ body {
   }
 }
 
-@keyframes team-fav {
-  0%, 100% {
-    scale: 1;
-  }
-  50% {
-    scale: 1.05;
-  }
-}
 .fav {
   background-color: #004b23 !important;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);

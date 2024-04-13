@@ -1,9 +1,11 @@
+@import 'animate';
+
 $default: #ffffff;
 $primary: #001845;
 $secondary: #004b23;
 $tertiary: #ffb703;
 $text-primary: #0a0a0a;
-$bgcolor: #d3d3d3;
+$bgcolor: #f5ebe0;
 
 @mixin flexCenter($flex-direction) {
   display: flex;
@@ -75,8 +77,8 @@ body {
       width: 70px;
     }
     @media (max-width:200px){
-      width: 20px;
-      height: 20px;
+      width: 35px;
+      height: 35px;
     }
   }
 }
@@ -246,55 +248,7 @@ body {
 .enter-cards{
   animation: enter-cards 2s linear;
 }
-@keyframes enter-cards {
-  0%{
-    transform: translateY(20px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
-}
-@keyframes enter-logo {
-  0% {
-    transform: translateY(-100px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes enter-page {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes loader-logo {
-  0%,
-  100% {
-    scale: 1.2;
-  }
-  50% {
-    scale: 1;
-  }
-}
-@keyframes arrow-next {
-  0%, 100%{
-    transform: translateY(-5px);
-  }
-  50%{
-    transform: translateY(0px);
-  }
-}
-@keyframes arrow-prev {
-  0%, 100%{
-    transform: translateY(5px);
-  }
-  50%{
-    transform: translateY(0px);
-  }
-}
+
 .loader-screen {
   width: 100vw;
   height: 100vh;
@@ -331,7 +285,7 @@ body {
     margin-top: 15px;
   }
   h2{
-      color: $text-primary;
+      color: $primary;
       margin: 5px;
       text-transform: uppercase;
       font-size: 40px;
@@ -363,16 +317,7 @@ body {
 @media (max-width:200px){
   margin-bottom: 30px;
 }
-  @keyframes card {
-    0%{
-    scale: 1.05;
-    opacity: 0.6;
-    }
-    100%{
-      scale: 1;
-      opacity: 1;
-    }
-  }
+ 
   .card-match {
     width: 250px;
     height: 160px;
@@ -466,14 +411,12 @@ body {
   margin: 5px;
   @media (max-width:600px){
     left: 20px;
-    transform: rotate(-90deg);
   }
 }
 .btn-next{
   animation: arrow-next 4s linear infinite;
   @media (max-width:600px){
     right: 20px;
-    transform: rotate(-90deg);
   }
 }
 .btn-prev , .btn-next{
@@ -481,9 +424,8 @@ body {
   height: 45px;
   text-align: center;
   cursor: pointer;
-  color: $text-primary;
+  color: $primary;
   border-radius: 50%;
-  
   animation: enter-cards 2s linear;
   @include flexCenter(row);
   &:hover{
@@ -500,6 +442,8 @@ body {
     height: 35px;
     position: absolute;
     top:190px;
+    transform: rotate(-90deg);
+    animation: btn-mobile 2s ease-in-out;
     @media (max-width:200px){
       top:112px;
     }
@@ -552,15 +496,6 @@ body {
     }
   }
 }
-@keyframes team-fav {
-  0%,100%{
-    scale: 1;
-  }
-  50%{
-    scale: 1.05;
-  }
-}
-
 .fav{
   background-color: $secondary !important;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
