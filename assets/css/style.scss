@@ -21,9 +21,24 @@ $bgcolor: #f5ebe0;
   transition: 0.5s;
   // overflow: hidden;
 }
+*::-webkit-scrollbar {
+  width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $bgcolor;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $secondary;
+  border-radius: 20px;
+  border: 1px solid $secondary;
+}
 body {
   background-color: $bgcolor;
   color: $default;
+  overflow-x: hidden;
+  overflow-y: auto;
   @media (max-width:200px){
     overflow-y: auto;
   }

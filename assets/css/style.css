@@ -80,9 +80,25 @@
   transition: 0.5s;
 }
 
+*::-webkit-scrollbar {
+  width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f5ebe0;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #004b23;
+  border-radius: 20px;
+  border: 1px solid #004b23;
+}
+
 body {
   background-color: #f5ebe0;
   color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 @media (max-width: 200px) {
   body {
