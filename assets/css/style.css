@@ -584,7 +584,6 @@ body {
 }
 
 .btn-prev {
-  visibility: hidden;
   animation: arrow-prev 4s linear infinite;
   margin: 5px;
 }

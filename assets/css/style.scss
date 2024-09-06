@@ -421,7 +421,7 @@ body {
   }
 }
 .btn-prev{
-  visibility: hidden;
+  // visibility: hidden;
   animation: arrow-prev 4s linear infinite;
   margin: 5px;
   @media (max-width:600px){
