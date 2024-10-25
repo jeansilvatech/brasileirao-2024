@@ -127,6 +127,14 @@ body {
 }
 .header .nav{
   width: 100vw;
+  @include flexCenter(column);
+  h3{
+    background-color: $tertiary;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 0 0 10px 10px;
+    color: $primary;
+  }
 }
 .header .nav .header-teams {
   background-color: $tertiary;
