@@ -11,7 +11,7 @@ const contentMatches = document.querySelector('.matches')
 const iconDrag = document.querySelector('.icon-drag')
 let dataMatches = [];
 let roundNumber = 31;
-let numberOfRound = 30;
+let numberOfRound = roundNumber -1;
 roundText.innerText = `${roundNumber}ª rodada`
 async function api(){
   const res = await fetch("../data/matches.json")
