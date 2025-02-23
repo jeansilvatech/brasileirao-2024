@@ -10,7 +10,7 @@ const roundText = document.querySelector('.round h2');
 const contentMatches = document.querySelector('.matches')
 const iconDrag = document.querySelector('.icon-drag')
 let dataMatches = [];
-let roundNumber = 31;
+let roundNumber = 38;
 let numberOfRound = roundNumber -1;
 roundText.innerText = `${roundNumber}ª rodada`
 async function api(){
@@ -109,6 +109,7 @@ function btnVisible(valueRound){
         btnNext.style.visibility = 'visible';
     }
 }
+btnVisible(roundNumber);
 
 var slider = new KeenSlider("#my-keen-slider", {
   breakpoints: {
